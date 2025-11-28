@@ -1,4 +1,4 @@
-let dataKomik = [
+let dataComic = [
   {
     id: 1,
     title: "Detective Conan",
@@ -33,4 +33,4 @@ let dataKomik = [
   }
 ];
 
-export default dataKomik;
+export default dataComic;

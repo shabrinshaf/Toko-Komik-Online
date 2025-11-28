@@ -10,7 +10,7 @@ app.use(express.json());
 });
 
 app.get("/", (req, res) => {
-    res.send("Welcome to Toko Komik Online!");
+    res.send("Welcome to Online Store!");
 });
 
 app.use(router);
