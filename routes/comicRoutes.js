@@ -1,11 +1,11 @@
-import express from "express";
 import { 
-  getAllComicsController, 
-  createComicController, 
-  getComicByIdController, 
-  updateComicController, 
-  deleteComicController 
+  getAllComicsController,
+  createComicController,
+  getComicByIdController,
+  updateComicController,
+  deleteComicController
 } from "../controllers/comicController.js";
+
 
 const router = express.Router();
 
