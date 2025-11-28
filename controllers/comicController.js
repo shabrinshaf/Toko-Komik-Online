@@ -1,10 +1,6 @@
-import {
-  createComic,
-  getAllComics,
-  getComicById,
-  updateComic,
-  deleteComic
-} from "../services/comicService.js";
+import comicService from "../services/comicService.js";
+
+const { createComic, getAllComics, getComicById, updateComic, deleteComic } = comicService;
 
 // Get all comics
 async function getAllComicsController(req, res) {
