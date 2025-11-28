@@ -4,7 +4,7 @@ import {
   getComicById,
   updateComic,
   deleteComic
-} from "../services/comicServices.js";
+} from "../services/comicService.js";
 
 // Get all comics
 async function getAllComicsController(req, res) {
