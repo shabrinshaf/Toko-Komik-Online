@@ -7,7 +7,7 @@ async function getAllComicsController(req, res) {
     try {
     const { genre } = req.query;
 
-    // Kalau tidak ada query -> tampilkan semua komik
+    // Kalau tidak ada query akan menampilkan semua komik
     if (!genre) {
       return res.status(200).json(dataComic);
     }
