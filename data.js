@@ -33,4 +33,6 @@ let dataComic = [
   }
 ];
 
+export let transactions = [];
+
 export default dataComic;
