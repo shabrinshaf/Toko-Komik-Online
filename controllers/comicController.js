@@ -4,14 +4,33 @@ const { createComic, getAllComics, getComicById, updateComic, deleteComic } = co
 
 // Get all comics
 async function getAllComicsController(req, res) {
-  try {
-    const comics = await getAllComics(req.query);
-    if (comics.length === 0) {
-      return res.status(404).json({ message: "No comics found" });
+    try {
+    const { genre } = req.query;
+
+    // Kalau tidak ada query -> tampilkan semua komik
+    if (!genre) {
+      return res.status(200).json(dataComic);
     }
-    res.status(200).json(comics);
+
+    // Filter berdasarkan genre (case insensitive)
+    const filtered = dataComic.filter(
+      (comic) => comic.genre.toLowerCase() === genre.toLowerCase()
+    );
+
+    // Jika genre ada tapi hasil kosong akan kasih feedback
+    if (filtered.length === 0) {
+      return res.status(404).json({
+        message: `No comics found for genre: ${genre}`,
+      });
+    }
+
+    return res.status(200).json(filtered);
+
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({
+      message: "Internal server error",
+      error: error.message,
+    });
   }
 }
 
