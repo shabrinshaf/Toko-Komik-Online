@@ -11,7 +11,7 @@ import {
 
 const router = express.Router();
 
-// Routes for comics
+// Nama route untuk komik
 router.get("/comics", getAllComicsController);        // Get all comics
 router.get("/comics/:id", getComicByIdController);   // Get comic by ID
 router.post("/comics", createComicController);       // Create new comic

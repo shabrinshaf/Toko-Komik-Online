@@ -1,6 +1,6 @@
-import dataComic from "../data.js"; // pastikan data.js berisi array komik
+import dataComic from "../data.js"; //mengambil daya komik dari file data.js
 
-// Get all comics, optional filter by genre
+// fungsi untuk mendapatkan semua komik 
 async function getAllComics(filters) {
   if (!filters || Object.keys(filters).length === 0) {
     return dataComic;
@@ -14,7 +14,7 @@ async function getAllComics(filters) {
   return filteredComics;
 }
 
-// Get comic by ID
+// fungsi untuk mendapatkan komik berdasarkan ID
 async function getComicById(id) {
   const comicId = parseInt(id);
   const comic = dataComic.find((c) => c.id === comicId);
@@ -24,7 +24,7 @@ async function getComicById(id) {
   return comic;
 }
 
-// Create new comic
+// Mnambuat komik baru
 async function createComic(comicData) {
   const newComic = {
     id: dataComic.length + 1,
@@ -38,7 +38,7 @@ async function createComic(comicData) {
   return newComic;
 }
 
-// Update comic
+// Mengubah informasi komik
 async function updateComic(id, comicData) {
   const comicId = parseInt(id);
   const comicIndex = dataComic.findIndex((c) => c.id === comicId);
@@ -55,7 +55,7 @@ async function updateComic(id, comicData) {
   return dataComic[comicIndex];
 }
 
-// Delete comic
+// Menghapus komik
 async function deleteComic(id) {
   const comicId = parseInt(id);
   const comicIndex = dataComic.findIndex((c) => c.id === comicId);

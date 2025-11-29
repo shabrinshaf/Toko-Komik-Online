@@ -33,6 +33,7 @@ let dataComic = [
   }
 ];
 
+// array untuk menyimpan data transaksi
 export let transactions = [];
 
 export default dataComic;

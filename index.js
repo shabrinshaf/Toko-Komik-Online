@@ -7,6 +7,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
+// Menggunakan route komik dan transaksi
 app.use(comicRoutes);
 app.use(transactionRoutes);
 

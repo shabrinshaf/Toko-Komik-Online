@@ -4,6 +4,7 @@ export function getTransactionsController(req, res) {
   res.json(getAllTransactions());
 }
 
+// Controller untuk membuat transaksi baru
 export function createTransactionController(req, res) {
   try {
     const { comicId, quantity } = req.body;

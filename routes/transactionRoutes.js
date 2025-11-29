@@ -1,4 +1,6 @@
 import express from "express";
+
+//Menampilkan controller dari transactionController.js
 import { 
   getTransactionsController, 
   createTransactionController 
@@ -6,6 +8,7 @@ import {
 
 const router = express.Router();
 
+//Nama route untuk transaksi
 router.get("/transactions", getTransactionsController);
 router.post("/transactions", createTransactionController);
 
