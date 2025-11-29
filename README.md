@@ -1,6 +1,7 @@
 FINAL PROJEK "Toko Komik" - Shabrina Hikmah Shafiyyah
 
 ================== Deskripsi Proyek =======================
+
 Program ini bertema Toko Komik Online yang memungkinkan pengguna untuk melihat daftar komik dan melakukan transaksi pembelian. 
 Sistem menggunakan Node.js dan Express tanpa database (data disimpan dalam file data.js menggunakan array).
 
